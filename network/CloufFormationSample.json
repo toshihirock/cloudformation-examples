@@ -1,0 +1,23 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "Create Network.",
+
+  "Resources" : {
+    "VPC" : {
+      "Type" : "AWS::EC2::VPC",
+      "Properties" : {
+        "CidrBlock": "172.30.0.0/16",
+        "EnableDnsHostnames": "true",
+        "Tags" : [ 
+          {
+            "Key": "Name",
+            "Value": "SampleVPC"
+          } 
+        ]
+      }
+    }
+  },
+
+  "Outputs" : {
+  }
+}
